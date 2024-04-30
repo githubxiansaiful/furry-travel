@@ -9,7 +9,7 @@ const SpotDetails = () => {
     const [touristSpot, settouristSpot] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleSpot/${id}`)
+        fetch(`https://explore-world-server-euodk4hhx-githubxiansaifuls-projects.vercel.app/singleSpot/${id}`)
             .then(res => res.json())
             .then(data => {
                 settouristSpot(data);
@@ -34,7 +34,7 @@ const SpotDetails = () => {
         console.log(allData);
 
 
-        fetch(`http://localhost:5000/updateSpot/${id}`, {
+        fetch(`https://explore-world-server-euodk4hhx-githubxiansaifuls-projects.vercel.app/updateSpot/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",

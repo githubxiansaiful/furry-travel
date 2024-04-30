@@ -27,7 +27,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/tourist-spot')
+                loader: () => fetch('https://explore-world-server-euodk4hhx-githubxiansaifuls-projects.vercel.app/tourist-spot')
             },
             {
                 path: '/property/:id',
@@ -65,7 +65,7 @@ const router = createBrowserRouter([
             {
                 path: "/all-tourists-spot",
                 element: <AllTouristsSpot></AllTouristsSpot>,
-                loader: () => fetch('http://localhost:5000/tourist-spot')
+                loader: () => fetch('https://explore-world-server-euodk4hhx-githubxiansaifuls-projects.vercel.app/tourist-spot')
             },
             {
                 path: "/add-tourists-spot",
