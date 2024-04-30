@@ -34,7 +34,7 @@ const SpotDetails = () => {
         console.log(allData);
 
 
-        fetch(`https://explore-world-server-euodk4hhx-githubxiansaifuls-projects.vercel.app/updateSpot/${id}`, {
+        fetch(`https://explore-world-server.vercel.app/updateSpot/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",

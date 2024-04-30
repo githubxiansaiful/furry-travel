@@ -6,7 +6,7 @@ const UpdateDeatils = () => {
     const [touristSpot, settouristSpot] = useState({});
 
     useEffect(() => {
-        fetch(`https://explore-world-server-euodk4hhx-githubxiansaifuls-projects.vercel.app/updateSpot/${id}`)
+        fetch(`https://explore-world-server.vercel.app/updateSpot/${id}`)
             .then(res => res.json())
             .then(data => {
                 settouristSpot(data);

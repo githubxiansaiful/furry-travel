@@ -12,7 +12,7 @@ const MyLists = () => {
     const [controlItem, setControlItem] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/all-tourist-spot/${userCurrent?.email}`)
+        fetch(`https://explore-world-server.vercel.app/all-tourist-spot/${userCurrent?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -22,7 +22,7 @@ const MyLists = () => {
 
     // Delete item
     const handleDeleteItem = (id) => {
-        fetch(`http://localhost:5000/deleteItem/${id}`, {
+        fetch(`https://explore-world-server.vercel.app/deleteItem/${id}`, {
             method: "DELETE"
         })
             .then(res => res.json())
