@@ -3,6 +3,7 @@ import { AuthContext } from "../firebase/FirebaseProvider";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet";
 
 const MyLists = () => {
 
@@ -40,6 +41,10 @@ const MyLists = () => {
 
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>My List | Furry Travel</title>
+            </Helmet>
             <div className="mt-[60px] lg:mt-[80px] animate__animated animate__fadeIn">
                 <div className="container">
                     <div className="max-w-[750px] mx-auto text-center mb-[80px]">

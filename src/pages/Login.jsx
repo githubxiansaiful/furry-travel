@@ -39,8 +39,7 @@ const Login = () => {
         <div className="mt-[100px] mb-[100px] max-w-[350px] mx-auto">
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Login | Real Estate</title>
-                <link rel="canonical" href="http://mysite.com/example" />
+                <title>Login | Furry Travel</title>
             </Helmet>
             <div className="container">
                 <div>

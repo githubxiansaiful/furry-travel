@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { Link, useLoaderData } from "react-router-dom";
 
 const AllTouristsSpot = () => {
@@ -5,6 +6,10 @@ const AllTouristsSpot = () => {
 
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>All Tourist Spot | Furry Travel</title>
+            </Helmet>
             <div className="mt-[60px] lg:mt-[80px] animate__animated animate__fadeIn">
                 <div className="container">
                     <div className="max-w-[750px] mx-auto text-center mb-[80px]">

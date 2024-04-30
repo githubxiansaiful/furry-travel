@@ -2,10 +2,11 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../firebase/FirebaseProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet";
 
 const AddTouristsSpot = () => {
 
-    const {userCurrent} = useContext(AuthContext);
+    const { userCurrent } = useContext(AuthContext);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -21,9 +22,9 @@ const AddTouristsSpot = () => {
         const totalVisitors = e.target.totalVPY.value;
         // User Data
         const userEmail = userCurrent.email;
-        const userName  = userCurrent.displayName;
+        const userName = userCurrent.displayName;
 
-        const allData = {imgURLs, touristSpotName, countryName, location, shortDescription, seasonName, avrCost, travelTime, totalVisitors, userEmail, userName};
+        const allData = { imgURLs, touristSpotName, countryName, location, shortDescription, seasonName, avrCost, travelTime, totalVisitors, userEmail, userName };
         console.log(allData);
 
 
@@ -34,18 +35,22 @@ const AddTouristsSpot = () => {
             },
             body: JSON.stringify(allData),
         })
-        .then(res => res.json())
-        .then(data => {
-            if(data?.insertedId) {
-                toast("Item Added, Thank you")
-            }
-            console.log(data);
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data?.insertedId) {
+                    toast("Item Added, Thank you")
+                }
+                console.log(data);
+            })
     }
 
     return (
         <div>
             <div className="container">
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>Add a New Item | Furry Travel</title>
+                </Helmet>
                 <div className="max-w-[600px] mx-auto my-10 border p-10 rounded-lg">
                     <h1 className="text-center text-3xl font-bold mb-5">Add Tourists Spot</h1>
                     <form onSubmit={handleSubmit}>

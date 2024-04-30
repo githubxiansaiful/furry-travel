@@ -39,8 +39,7 @@ const EditProfile = () => {
             <div className="my-20">
                 <Helmet>
                     <meta charSet="utf-8" />
-                    <title>Edit Profile | Real Estate</title>
-                    <link rel="canonical" href="http://mysite.com/example" />
+                    <title>Edit Profile | Furry Travel</title>
                 </Helmet>
                 <div className="container">
                     <div className=" rounded-2xl p-10 mx-auto max-w-[500px] shadow-xl">
