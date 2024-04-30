@@ -60,7 +60,7 @@ const router = createBrowserRouter([
             {
                 path: "/all-tourists-spot",
                 element: <AllTouristsSpot></AllTouristsSpot>,
-                loader: () => fetch('https://explore-world-server-euodk4hhx-githubxiansaifuls-projects.vercel.app/tourist-spot')
+                loader: () => fetch('https://explore-world-server.vercel.app/tourist-spot')
             },
             {
                 path: "/add-tourists-spot",
