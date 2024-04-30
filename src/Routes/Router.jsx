@@ -27,12 +27,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('https://explore-world-server-euodk4hhx-githubxiansaifuls-projects.vercel.app/tourist-spot')
-            },
-            {
-                path: '/property/:id',
-                element: <PrivateRoute><PropertyItem></PropertyItem></PrivateRoute>,
-                loader: () => fetch('/public/real_estate.json')
+                loader: () => fetch('https://explore-world-server.vercel.app/tourist-spot')
             },
             {
                 path: "/about-us",
