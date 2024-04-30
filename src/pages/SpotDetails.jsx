@@ -9,7 +9,7 @@ const SpotDetails = () => {
     const [touristSpot, settouristSpot] = useState({});
 
     useEffect(() => {
-        fetch(`https://explore-world-server-euodk4hhx-githubxiansaifuls-projects.vercel.app/singleSpot/${id}`)
+        fetch(`https://explore-world-server.vercel.app/singleSpot/${id}`)
             .then(res => res.json())
             .then(data => {
                 settouristSpot(data);
@@ -81,19 +81,19 @@ const SpotDetails = () => {
                             </div>
                             <div className="text-black space-y-1">
                                 <label>Average Cost </label>
-                                <input type="text" required name="averageCost" defaultValue={touristSpot.avrCost} className="input input-bordered w-full" />
+                                <input type="number" required name="averageCost" defaultValue={touristSpot.avrCost} className="input input-bordered w-full" />
                             </div>
                             <div className="text-black space-y-1">
                                 <label>Season </label>
                                 <input type="text" required placeholder="ex: Winter, Summer" name="season" defaultValue={touristSpot.seasonName} className="input input-bordered w-full" />
                             </div>
                             <div className="text-black space-y-1">
-                                <label>Travel Time </label>
-                                <input type="text" required name="travelTime" placeholder="ex: 7 days" defaultValue={touristSpot.travelTime} className="input input-bordered w-full" />
+                                <label>Travel Time(days) </label>
+                                <input type="number" required name="travelTime" placeholder="ex: 7 days" defaultValue={touristSpot.travelTime} className="input input-bordered w-full" />
                             </div>
                             <div className="text-black space-y-1">
                                 <label>Total Visitors Per Year </label>
-                                <input type="text" required name="totalVPY" placeholder="ex: 10,000" defaultValue={touristSpot.totalVisitors} className="input input-bordered w-full" />
+                                <input type="number" required name="totalVPY" placeholder="ex: 10,000" defaultValue={touristSpot.totalVisitors} className="input input-bordered w-full" />
                             </div>
                             <div>
                                 <button className="btn btn-primary w-full">Update Now</button>

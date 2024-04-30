@@ -72,7 +72,7 @@ const AddTouristsSpot = () => {
                             </div>
                             <div className="text-black space-y-1">
                                 <label>Average Cost <span className="text-red-500">*</span></label>
-                                <input type="text" required name="averageCost" className="input input-bordered w-full" />
+                                <input type="number" required name="averageCost" className="input input-bordered w-full" />
                             </div>
                             <div className="text-black space-y-1">
                                 <label>Season <span className="text-red-500">*</span></label>
@@ -80,11 +80,11 @@ const AddTouristsSpot = () => {
                             </div>
                             <div className="text-black space-y-1">
                                 <label>Travel Time <span className="text-red-500">*</span></label>
-                                <input type="text" required name="travelTime" placeholder="ex: 7 days" className="input input-bordered w-full" />
+                                <input type="number" required name="travelTime" placeholder="ex: 7 days" className="input input-bordered w-full" />
                             </div>
                             <div className="text-black space-y-1">
                                 <label>Total Visitors Per Year <span className="text-red-500">*</span></label>
-                                <input type="text" required name="totalVPY" placeholder="ex: 10,000" className="input input-bordered w-full" />
+                                <input type="number" required name="totalVPY" placeholder="ex: 10,000" className="input input-bordered w-full" />
                             </div>
                             <div>
                                 <button className="btn btn-primary w-full">Submit Now</button>
